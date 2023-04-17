@@ -9,7 +9,7 @@
 	Subject:	Races
 	Effect:		This script adds a race, Nymph, with 7 subraces: Alseid, Asteria, Aurae, Dryad, Lampad, Oread, and Naiad
 	Code by:	u/CarmenEtTerror
-	Date:		16 APR 2023
+	Date:		17 APR 2023
     Source: Nymph by u/Dragoborn93, found online at https://www.gmbinder.com/share/-M4dNGXFlkBi1OPjuUDX
 */
 
@@ -81,6 +81,15 @@ AddRacialVariant("nymph", "alseid", {
   	adv_vs:["charmed"]
 	},
 	dmgres : ["Radiant"],
+	features : {
+		"healing hands" : {
+			name : "Healing Hands",
+			minlevel : 1,
+			action : ["action", "Healing Hands"],
+			usages : 1,
+			recovery : "long rest",
+		},
+	},
 });
 
 AddRacialVariant("nymph", "asteria", {
@@ -167,7 +176,15 @@ AddRacialVariant("nymph", "aura", {
     text:["Magic can't put me to sleep"],
 		immune : ["fall damage"],
   adv_vs:["charmed"]},
-
+	features : {
+		"wind sense" : {
+			name : "Wind Sense",
+			minlevel : 1,
+			action : ["action", "Wind Sense"],
+			usages : 1,
+			recovery : "long rest",
+		},
+	},
 });
 
 AddRacialVariant("nymph", "dryad", {
